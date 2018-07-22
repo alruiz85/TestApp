@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var labelTitulo: UILabel!
     
+    var mazda: Mazda?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         labelTitulo.text = "Fábrica de coches"
@@ -19,6 +21,7 @@ class ViewController: UIViewController {
 
     
     @IBAction func createMazdaObject(_ sender: UIButton) {
+        mazda = Mazda()
         
     }
     
@@ -27,11 +30,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startMazda(_ sender: UIButton) {
-        
+        mazda?.startEngine()
     }
     
     @IBAction func accelerateMazda(_ sender: UIButton) {
-        
+        mazda?.stopEngine()
     }
 }
 
